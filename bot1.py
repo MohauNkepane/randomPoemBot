@@ -38,7 +38,7 @@ def help_user(update, context):
 
 
 def getPoem(update, context):
-    poem = rp.stringifypoem(rp.randompoem(random.randint(0, 2972)))
+    poem = rp.stringifypoem(rp.randompoem())
     update.message.reply_text(poem, reply_markup=ReplyKeyboardRemove())
     return MENU
 

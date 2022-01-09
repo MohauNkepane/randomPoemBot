@@ -6,7 +6,8 @@ import random
 # r = requests.get("https://poetrydb.org/linecount/18/lines.json")
 
 
-def randompoem(randomnumber=0):
+def randompoem():
+    randomnumber=random.randint(0, 2972)
     r = requests.get("https://poetrydb.org/title")
     if r.status_code == 200:
         title = r.json()["titles"][randomnumber].strip()
