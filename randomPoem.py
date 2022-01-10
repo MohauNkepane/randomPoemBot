@@ -38,6 +38,6 @@ def stringifypoem(poem):
 
 
 if __name__ == '__main__':
-    print(stringifypoem(randompoem(random.randint(0, 2972))))
+    print(stringifypoem(randompoem()))
     # print(randompoem(89)[0])
     # print(r.json()["titles"])
