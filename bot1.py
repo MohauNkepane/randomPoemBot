@@ -4,12 +4,12 @@ from telegram.ext import *
 import randomPoem as rp
 
 import logging
-TOKEN = None
+secret = None
 MENU = 0
 with open("secrets.txt", 'r') as f:
-    TOKEN = f.read()
+    secret = f.read()
 
-bot = Bot(TOKEN)
+bot = Bot(secret)
 
 
 def start(update, context):
