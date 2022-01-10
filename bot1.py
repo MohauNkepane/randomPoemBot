@@ -47,6 +47,7 @@ def getPoem(update, context):
 
 
 def main():
+    print("The bot is currently online...")
     updater = Updater(os.getenv("TOKEN"))
     dispatcher = updater.dispatcher
 
