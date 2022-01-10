@@ -1,7 +1,9 @@
-import random
+import os
 from telegram import *
 from telegram.ext import *
 import randomPoem as rp
+from dotenv import load_dotenv
+load_dotenv()
 
 import logging
 secret = None
@@ -9,7 +11,7 @@ MENU = 0
 with open("secrets.txt", 'r') as f:
     secret = f.read()
 
-bot = Bot(secret)
+bot = Bot(os.getenv("TOKEN"))
 
 
 def start(update, context):
@@ -45,7 +47,7 @@ def getPoem(update, context):
 
 
 def main():
-    updater = Updater(TOKEN)
+    updater = Updater(os.getenv("TOKEN"))
     dispatcher = updater.dispatcher
 
     conversation_handler = ConversationHandler(
