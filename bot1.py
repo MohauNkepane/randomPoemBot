@@ -13,19 +13,19 @@ bot = Bot(os.getenv("TOKEN"))
 
 def start(update, context):
     update.message.reply_text("""/Poem -> To request a random Poem \n /cancel -> To Close Conversation \n/help -> To Seek Bot Help
-    Please Send Me Your Location""", reply_markup=ReplyKeyboardRemove())
+    """, reply_markup=ReplyKeyboardRemove())
     return MENU
 
 
 def cancel(update, context):
-    update.message.reply_text("Closing Conversation", reply_markup=ReplyKeyboardRemove())
+    update.message.reply_text("Closing Conversation \n /start -> To Start Conversation", reply_markup=ReplyKeyboardRemove())
     ConversationHandler.END
 
 
 def help_user(update, context):
     update.message.reply_text("""
-    I will guide you on how to user this bot.
-    Go Back to /menu.
+    I will guide you on how to user this bot. \n Content Coming Soon...
+    
     """, reply_markup=ReplyKeyboardRemove())
     start(update, context)
 
