@@ -5,11 +5,8 @@ import randomPoem as rp
 from dotenv import load_dotenv
 load_dotenv()
 
-import logging
-secret = None
 MENU = 0
-with open("secrets.txt", 'r') as f:
-    secret = f.read()
+
 
 bot = Bot(os.getenv("TOKEN"))
 
